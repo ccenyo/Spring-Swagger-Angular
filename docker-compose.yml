@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  #db
+  demo2-db:
+    image: ${DOCKER_REGISTRY-}demo2-db
+    container_name: demo2-db
+    ports:
+      - "5436:5432"
+    environment:
+      POSTGRES_DB: Demo
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: demo
+    build:
+      context: data
+      dockerfile: Dockerfile

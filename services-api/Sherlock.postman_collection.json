@@ -1,0 +1,318 @@
+{
+	"info": {
+		"_postman_id": "afd8aca9-2872-445d-ad9b-764563e12dd3",
+		"name": "Sherlock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Contract",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/c/Contract",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"c",
+						"Contract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contract / number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/c/Contract/KEY001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"c",
+						"Contract",
+						"KEY001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contract",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/c/Contract/e312eab4-9a15-4e91-b659-37e4c2f34438",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"c",
+						"Contract",
+						"e312eab4-9a15-4e91-b659-37e4c2f34438"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contract",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contract\": {\r\n    \"number\": \"C024\",\r\n    \"name\": \"Contrat DSP 24\",\r\n    \"startDate\": \"2019-11-11T16:57:16.511Z\",\r\n    \"endDate\": \"2022-11-11T16:57:16.511Z\",\r\n    \"pollsterValidationTime\": 5,\r\n    \"carrierValidationTime\": 10,\r\n    \"type\": \"DspSecondGeneration\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/c/Contract",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"c",
+						"Contract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contract",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"e312eab4-9a15-4e91-b659-37e4c2f34438\",\r\n  \"contract\": {\r\n    \"number\": \"KEY001\",\r\n    \"name\": \"Contrat KEY 1\",\r\n    \"startDate\": \"2019-11-05T00:00:00\",\r\n    \"endDate\": \"2023-10-31T00:00:00\",\r\n    \"pollsterValidationTime\": 10,\r\n    \"carrierValidationTime\": 55,\r\n    \"type\": \"DspSecondGeneration\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/c/Contract",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"c",
+						"Contract"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/u/User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"u",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/u/User",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"u",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "sherlock",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "olivier@gonet.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pouet",
+							"type": "text"
+						},
+						{
+							"key": "response_type",
+							"value": "id_token",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Userinfo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "ContractsAPI",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "sherlock",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "secret",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5002/connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contracts Swagger JSON",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6IkRGMDU5MzNCNDlCMUZDMkREQTY1MzJFNjAxNEIzMEIwIiwidHlwIjoiYXQrand0In0.eyJuYmYiOjE2MDUxNzI2ODEsImV4cCI6MTYwNTE3NjI4MSwiaXNzIjoiaHR0cDovL3VzZXJzIiwiYXVkIjoiaHR0cDovL3VzZXJzL3Jlc291cmNlcyIsImNsaWVudF9pZCI6InNoZXJsb2NrIiwic3ViIjoiYWRtaW5Ac2hlcmxvY2sua2V5IiwiYXV0aF90aW1lIjoxNjA1MTcyNjgwLCJpZHAiOiJsb2NhbCIsImVtYWlsIjoiYWRtaW5Ac2hlcmxvY2sua2V5IiwibmFtZSI6IktFWSBBZG1pbiIsInJvbGUiOiJBZG1pbmlzdHJhdG9yIiwicHJvZmlsZSI6IkFkbWluaXN0cmF0b3IiLCJqdGkiOiI0NzIxNzUyRjEyN0JDOTJBMjcyODdEOEU4NDExNzAxNSIsImlhdCI6MTYwNTE3MjY4MSwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJhbXIiOlsiY3VzdG9tIl19.PfpJasaLrvIDFrdUnVSUlhrwIUGsOO_xWFubN6yCaZPxN2eEnxxuvECB-bZ3cYwg4g-5zVPXV7mxJMfv_caVfcBQlqWOCgXt5RAX7zuVIP14uhRZd8vl0IyTzeFGkgNpE1HM3Qrd_ryKINZINl9O5EFNXXepcirYc_MKpxB3_iXe1OQdlu7pIeLSkoEjYsdu1M3QHKzWiY8YhnPm16mnSfDodOLs_bn1Vw_HpJ4m-2-zrN-8M4qrc_9FXtmA084dUAUCAdn8uSfU_Ded4A_n2WmXpUmJ9809wwhhEb3cR9uym-LronQl5rJ1rfBEwqomPx8fwmTjIEedOIyAzcrgGg",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "21ecbb8e-6528-4c82-af4b-14afca9dda7e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "26c3d11e-7d88-4752-b525-9f3d00638ba5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

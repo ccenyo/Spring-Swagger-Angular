@@ -1,0 +1,8 @@
+baseUrl: http://localhost:8080
+ngVersion: 10.1.6
+targetFramework: netcoreapp3.1
+services:
+  - name: demo
+    baseUrl: http://localhost:8080
+    prefix: c
+    version: 1.0.0
