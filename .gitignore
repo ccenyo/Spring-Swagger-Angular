@@ -21,3 +21,4 @@ target/
 
 /WebApp/demo/node_modules
 .mvn/
+/WebApp/node_modules/
