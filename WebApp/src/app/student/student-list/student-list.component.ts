@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { EntityModelStudent, StudentEntityService } from "@demo/demo-api";
+import { EntityModelStudent, Student, StudentControllerService } from "@demo/demo-api";
+import { StudentResolver } from "../student-resolver";
 
 
 @Component({
@@ -9,21 +10,21 @@ import { EntityModelStudent, StudentEntityService } from "@demo/demo-api";
   })
   export class StudentListComponent implements OnInit {
 
-    public dataSource: EntityModelStudent [];
+    public dataSource: Student [];
     public displayedColumns: string[];
 
-    constructor(private studentService: StudentEntityService) {
+    constructor(private studentService: StudentControllerService) {
 
     }
 
     ngOnInit(): void {
-      this.displayedColumns= ['firstName', 'lastName', 'age', 'shcoolName'];
+      this.displayedColumns= ['firstName', 'lastName', 'age', 'shcoolName', 'actions'];
 
 
       this.studentService
-      .findAllStudentUsingGET()
+      .getAllStudentsUsingGET()
       .subscribe(collection => {
-        this.dataSource = collection._embedded.students
+        this.dataSource = collection
       })
     }
 

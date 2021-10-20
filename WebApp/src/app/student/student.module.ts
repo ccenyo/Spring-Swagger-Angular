@@ -5,6 +5,9 @@ import { RouterModule } from "@angular/router";
 import { StudentEditComponent } from "./student-edit/student-edit.component";
 import { StudentListComponent } from "./student-list/student-list.component";
 import { studentRoutes } from "./student-routing.module";
+import { MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule } from "@angular/forms";
+import { StudentResolver } from "./student-resolver";
 
 @NgModule({
     declarations: [
@@ -16,9 +19,14 @@ import { studentRoutes } from "./student-routing.module";
         RouterModule.forChild(
             studentRoutes
         ),
-        MatTableModule
+        MatTableModule,
+        MatIconModule,
+        ReactiveFormsModule
 
-    ]
+    ],
+    providers: [
+      StudentResolver
+    ],
   })
   export class StudentModule { }
   

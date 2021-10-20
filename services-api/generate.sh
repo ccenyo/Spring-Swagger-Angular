@@ -6,7 +6,7 @@
 set -e
 cd "$(dirname "${BASH_SOURCE[0]}")"
 OUTPUT_TMP_DIR="./__tmp"
-CLIENT_SRC="$(pwd)/../WebApp/demo"
+CLIENT_SRC="$(pwd)/../WebApp"
 source ./tools/yaml.sh
 
 # Default

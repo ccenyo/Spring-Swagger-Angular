@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.1.9",
     "@angular/router": "~9.1.9",
     "@demo/demo-api": "file:src/generated/demo-demo-api-1.0.0.tgz",
+    "bootstrap": "^5.1.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
   },

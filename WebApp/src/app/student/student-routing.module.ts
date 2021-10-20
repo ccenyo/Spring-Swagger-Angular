@@ -8,23 +8,23 @@ export const studentRoutes: Routes = [
       path: '',
       component: StudentListComponent,
       data: {
-        breadcrumb : {
-          enabled: true,
-          wide: false,
-        }
+        
       }
     },
   {
-    path: 'details/:id',
+    path: 'edit/:id',
     component: StudentEditComponent,
     data: {
-      breadcrumb : {
-        enabled: true,
-        wide: false,
-      }
+
     },
     resolve: {
       student: StudentResolver
+    }
+  },  {
+    path: 'add',
+    component: StudentEditComponent,
+    data: {
+
     }
   },
 
