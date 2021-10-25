@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { EntityModelStudent, Student, StudentControllerService } from "@demo/demo-api";
-import { StudentResolver } from "../student-resolver";
+import { Student, StudentControllerService } from "@demo/demo-api";
 
 
 @Component({
@@ -26,6 +25,17 @@ import { StudentResolver } from "../student-resolver";
       .subscribe(collection => {
         this.dataSource = collection
       })
+    }
+
+    delete(id: number) {
+      this.studentService.deleteStudentByIdUsingDELETE(id)
+      .subscribe(() => {
+        this.studentService
+        .getAllStudentsUsingGET()
+        .subscribe(collection => {
+          this.dataSource = collection
+        })
+      });
     }
 
 }
